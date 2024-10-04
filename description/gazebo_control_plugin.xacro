@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+    <gazebo>
+        <plugin name="diff_drive_plugin" filename="libgazebo_diff_drive_plugin.so">
+            <commandTopic>/cmd_vel</commandTopic>    <!-- Twist mesajı ile sürüş -->
+            <odometryTopic>/odom</odometryTopic>     <!-- Odometri mesajı -->
+            <leftJoint>left_wheel_joint</leftJoint>  <!-- Sol tekerlek eklemi -->
+            <rightJoint>right_wheel_joint</rightJoint> <!-- Sağ tekerlek eklemi -->
+            <wheelSeparation>0.6</wheelSeparation>   <!-- Tekerlekler arası mesafe -->
+            <wheelRadius>0.165</wheelRadius>         <!-- Tekerlek yarıçapı -->
+            <publishOdom>true</publishOdom>          <!-- Odometri yayını -->
+        </plugin>
+    </gazebo>
+
+</robot>
